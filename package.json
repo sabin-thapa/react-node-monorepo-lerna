@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "lerna": "^6.6.2"
+  },
+  "name": "react-node-monorepo-lerna",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ]
+}
