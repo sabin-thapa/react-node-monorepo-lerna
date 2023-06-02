@@ -1,10 +1,23 @@
 {
   "devDependencies": {
-    "lerna": "^6.6.2"
+    "husky": "^8.0.0",
+    "lerna": "^6.6.2",
+    "lint-staged": "^13.2.2"
   },
   "name": "react-node-monorepo-lerna",
+  "private": "true",
   "version": "1.0.0",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "lerna run start --scope={frontend,backend}",
+    "client": "lerna run start --scope frontend",
+    "server": "lerna run start --scope backend",
+    "test": "echo \"Error: no test specified\" && exit 1 ",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff",
+    "prepare": "husky install"
+  }
+
 }
