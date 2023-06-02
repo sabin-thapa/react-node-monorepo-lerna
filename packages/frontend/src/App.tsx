@@ -7,13 +7,13 @@ import * as NotesApi from "./network/notes_api";
 import AddNoteDialog from "./components/AddNoteDialog";
 
 function App() {
-  const [notes, setNotes] = useState<NoteModel[]>([]);
+                      const [notes, setNotes] = useState<NoteModel[]>([]);
   const [showAddNotes, setShowAddNotes] = useState(false);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const notes = await NotesApi.fetchNotes();
+          useEffect(() => {
+            async function fetchData() {
+              try {
+                const notes = await NotesApi.fetchNotes();
         setNotes(notes);
         console.log("fetched");
       } catch (error) {
